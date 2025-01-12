@@ -2,32 +2,22 @@
 
 import React from 'react';
 
-const Technology = () => {
+const Tools = () => {
     const videos = [
         {
             title: "What is AI?",
-            url: "https://res.cloudinary.com/dmytdvbal/video/upload/v1736695762/1.1_what_ist_ai_1080p_bavbc6.mp4",
+            url: "https://res.cloudinary.com/dmytdvbal/video/upload/v1736708921/3.3_midjourney_1080p_ruzr7y.mp4",
             poster: "/image/Cover-2.png",
         },
         {
             title: "What Can AI Do?",
-            url: "https://res.cloudinary.com/dmytdvbal/video/upload/v1736695935/1.2_what_can_ai_do_1080p_wy2ou1.mp4",
+            url: "https://res.cloudinary.com/dmytdvbal/video/upload/v1736708939/3.1_prompt_engineering_1080p_dshmdy.mp4",
             poster: "/image/Cover-3.png",
         },
         {
             title: "Neuronal Networks",
-            url: "https://res.cloudinary.com/dmytdvbal/video/upload/v1736696030/1.3_neuronal_networks_1080p_cigro1.mp4",
+            url: "https://res.cloudinary.com/dmytdvbal/video/upload/v1736708957/3.2_chatgpt_1080p_bfnn1f.mp4",
             poster: "/image/Cover-4.png",
-        },
-        {
-            title: "Ethical Questions",
-            url: "https://res.cloudinary.com/dmytdvbal/video/upload/v1736696077/1.5_ethical_questions_1080p_o5rzh3.mp4",
-            poster: "/image/Cover-6.png",
-        },
-        {
-            title: "Legal Framework",
-            url: "https://res.cloudinary.com/dmytdvbal/video/upload/v1736703868/1.4_legal_basis_of_ai_720p_avhqcg.mp4",
-            poster: "/image/Cover-5.png",
         },
     ];
 
@@ -69,4 +59,4 @@ const Technology = () => {
     );
 };
 
-export default Technology;
+export default Tools;
