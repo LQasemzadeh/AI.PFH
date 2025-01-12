@@ -4,7 +4,7 @@ import Image from 'next/image';
 const Hero = () => {
     return (
         <div className="relative bg-blue-900 text-white overflow-hidden">
-            <div className="max-w-7xl h-screen mx-auto px-6 sm:px-12 lg:px-24 pt-14 pb-32">
+            <div className="max-w-7xl h-screen mx-auto px-6 sm:px-12 lg:px-24 pt-20 pb-32">
                 <div className="flex flex-col lg:flex-row items-center justify-between pt-12">
                     {/* Left Content */}
                     <div className="text-center lg:text-left lg:w-1/2 px-10">
