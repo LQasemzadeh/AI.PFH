@@ -23,9 +23,9 @@ const Technology = () => {
     ];
 
     return (
-        <div className="bg-white text-gray-900 py-10 px-4">
+        <div className="bg-white text-gray-900 py-10 px-12">
             <h2 className="text-3xl font-bold mb-6">1. Technology</h2>
-            <p className="text-lg mb-8 leading-relaxed text-gray-700">
+            <p className="text-sm mb-8 leading-relaxed text-gray-700">
                 Artificial Intelligence, or AI for short, is a fascinating and often misunderstood field of computer
                 science.
                 Although the term AI is often used, many people do not know exactly what it means. In the following
@@ -56,4 +56,4 @@ const Technology = () => {
     );
 };
 
-export default Technology;
+export default Technology
