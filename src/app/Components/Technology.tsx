@@ -1,24 +1,34 @@
 'use client'
 
 import React from 'react';
+import { FaPlay } from 'react-icons/fa';
 
 const Technology = () => {
     const videos = [
         {
             title: "What is AI?",
             url: "https://res.cloudinary.com/dmytdvbal/video/upload/v1736695762/1.1_what_ist_ai_1080p_bavbc6.mp4",
+            poster: "/image/Cover-2.png",
         },
         {
             title: "What Can AI Do?",
             url: "https://res.cloudinary.com/dmytdvbal/video/upload/v1736695935/1.2_what_can_ai_do_1080p_wy2ou1.mp4",
+            poster: "/image/Cover-3.png",
         },
         {
             title: "Neuronal Networks",
             url: "https://res.cloudinary.com/dmytdvbal/video/upload/v1736696030/1.3_neuronal_networks_1080p_cigro1.mp4",
+            poster: "/image/Cover-4.png",
+        },
+        {
+            title: "Legal Framework",
+            url: "https://res.cloudinary.com/dmytdvbal/video/upload/v1736703868/1.4_legal_basis_of_ai_720p_avhqcg.mp4",
+            poster: "/image/Cover-5.png",
         },
         {
             title: "Ethical Questions",
             url: "https://res.cloudinary.com/dmytdvbal/video/upload/v1736696077/1.5_ethical_questions_1080p_o5rzh3.mp4",
+            poster: "/image/Cover-6.png",
         },
     ];
 
@@ -38,16 +48,25 @@ const Technology = () => {
                         key={index}
                         className="group relative flex-shrink-0 w-64 h-36 md:w-80 md:h-44 cursor-pointer"
                     >
+                        {/* Video element */}
                         <video
-                            className="absolute w-full h-full object-cover rounded-lg transition-transform transform group-hover:scale-110"
+                            className="absolute w-full h-full object-cover rounded-lg"
                             src={video.url}
+                            poster={video.poster || ""}
                             loop
                             onMouseEnter={(e) => (e.currentTarget.play())}
                             onMouseLeave={(e) => (e.currentTarget.pause())}
                         />
+                        {/* Dark overlay */}
+                        <div className="absolute w-full h-full bg-black opacity-30 rounded-lg"></div>
+                        {/* Play Icon */}
+                        <div className="absolute inset-0 flex items-center justify-center">
+                            <FaPlay className="text-white text-4xl opacity-80" />
+                        </div>
+                        {/* Title */}
                         <div
-                            className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black via-transparent to-transparent rounded-b-lg opacity-0 group-hover:opacity-100 transition-opacity">
-                            <p className="text-sm font-semibold">{video.title}</p>
+                            className="absolute bottom-0 left-0 right-0 p-2 bg-gradient-to-t from-black via-transparent to-transparent rounded-b-lg">
+                            <p className="text-sm font-semibold text-white">{video.title}</p>
                         </div>
                     </div>
                 ))}
@@ -56,4 +75,4 @@ const Technology = () => {
     );
 };
 
-export default Technology
+export default Technology;

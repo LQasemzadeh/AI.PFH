@@ -7,7 +7,7 @@ const Introduction: React.FC = () => {
                 {/* Left Side: Video */}
                 <div className="w-full md:w-1/2">
                     <video
-                        src="/video/pfh_ai_einführung_prof._dr._frank_albe (1080p) (1).mp4"
+                        src="https://res.cloudinary.com/dmytdvbal/video/upload/v1736695594/pfh_ai_einfu%CC%88hrung_prof._dr._frank_albe_1080p_1_ofxqjv.mp4"
                         poster="/image/Cover-1.png"
                         controls
                         className="w-full h-auto rounded-lg shadow-lg"
