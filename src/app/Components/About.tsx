@@ -1,17 +1,10 @@
 'use client';
 
 import React from 'react';
-import { useRouter } from 'next/navigation';
 
 const About: React.FC = () => {
-    const router = useRouter();
-
-    const handleLearnMoreClick = () => {
-        router.push('/AboutUs');
-    };
-
     return (
-        <div className="-mt-34">
+        <div id="about" className="-mt-34">
             <div className="flex justify-center items-center py-10 px-4">
                 <div
                     className="relative max-w-5xl w-full bg-cover bg-center rounded-xl shadow-lg text-white"
@@ -32,7 +25,7 @@ const About: React.FC = () => {
                             Our underlying leitmotif <span className="text-blue-300 font-bold">&quot;D3: Make your studies count - today and in the future&quot;</span> emphasises the high relevance of our degree programmes for professional practice in a global and social context by consistently maintaining direct links to the defining trends of our time: digitalisation, decarbonisation and demographic change.
                         </p>
                         <button
-                            onClick={handleLearnMoreClick}
+                            onClick={() => (window.location.href = '/AboutUs')}
                             className="mt-8 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-md shadow-md"
                         >
                             Learn More

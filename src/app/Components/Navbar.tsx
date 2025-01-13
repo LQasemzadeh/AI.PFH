@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
 import Image from 'next/image';
 import { FiSearch } from 'react-icons/fi';
 import { HiMenu, HiX } from 'react-icons/hi';
@@ -58,13 +59,15 @@ const Navbar: React.FC = () => {
                     <div className="flex items-center space-x-6">
                         {/* Logo */}
                         <div className="flex-shrink-0">
-                            <Image
-                                src="/image/PFH.png"
-                                alt="PFH Logo"
-                                width={200}
-                                height={200}
-                                className="object-contain"
-                            />
+                            <Link href="/">
+                                <Image
+                                    src="/image/PFH.png"
+                                    alt="PFH Logo"
+                                    width={200}
+                                    height={200}
+                                    className="object-contain cursor-pointer"
+                                />
+                            </Link>
                         </div>
 
                         {/* Links */}
@@ -74,6 +77,9 @@ const Navbar: React.FC = () => {
                             </a>
                             <a href="#publications" className="text-white hover:text-cyan-200">
                                 Publications
+                            </a>
+                            <a href="#events" className="text-white hover:text-cyan-200">
+                                Events
                             </a>
                             <a href="#about" className="text-white hover:text-cyan-200">
                                 About
@@ -86,13 +92,11 @@ const Navbar: React.FC = () => {
 
                     {/* Search Bar and Language Toggle */}
                     <div className="hidden md:flex items-center relative space-x-4" ref={searchRef}>
-                        {/* Search Icon */}
                         <FiSearch
                             className="text-white text-xl cursor-pointer z-10"
                             onClick={() => setSearchOpen(!searchOpen)}
                         />
 
-                        {/* Search Bar */}
                         <input
                             type="text"
                             placeholder="Search..."
@@ -107,7 +111,6 @@ const Navbar: React.FC = () => {
                             }}
                         />
 
-                        {/* Language Toggle */}
                         <div
                             className="flex items-center text-white text-sm cursor-pointer hover:text-cyan-200"
                             onClick={() => setLanguage((prev) => (prev === 'EN' ? 'DE' : 'EN'))}
@@ -117,9 +120,8 @@ const Navbar: React.FC = () => {
                         </div>
                     </div>
 
-                    {/* Hamburger Menu and Language Toggle (Mobile) */}
+                    {/* Hamburger Menu */}
                     <div className="flex md:hidden items-center space-x-4">
-                        {/* Language Toggle */}
                         <div
                             className="flex items-center text-white text-sm cursor-pointer hover:text-cyan-200"
                             onClick={() => setLanguage((prev) => (prev === 'EN' ? 'DE' : 'EN'))}
@@ -127,7 +129,6 @@ const Navbar: React.FC = () => {
                             <MdLanguage className="text-xl mr-1" />
                             <span>{language}</span>
                         </div>
-                        {/* Hamburger Menu */}
                         <button
                             onClick={() => setNavbarOpen(!navbarOpen)}
                             className="text-white text-2xl focus:outline-none"
@@ -137,39 +138,6 @@ const Navbar: React.FC = () => {
                     </div>
                 </div>
             </div>
-
-            {/* Mobile Menu */}
-            {navbarOpen && (
-                <div className="md:hidden bg-white">
-                    <div className="space-y-2 px-4 py-4 text-gray-900">
-                        <div className="flex items-center">
-                            <FiSearch
-                                className="text-gray-900 text-xl cursor-pointer"
-                                onClick={() => setSearchOpen(!searchOpen)}
-                            />
-                            {searchOpen && (
-                                <input
-                                    type="text"
-                                    placeholder="Search..."
-                                    className="absolute bg-gray-800 text-white px-4 py-2 rounded-md outline-none w-full"
-                                />
-                            )}
-                        </div>
-                        <a href="#news" className="block hover:text-cyan-200">
-                            News
-                        </a>
-                        <a href="#publications" className="block hover:text-cyan-200">
-                            Publications
-                        </a>
-                        <a href="#about" className="block hover:text-cyan-200">
-                            About
-                        </a>
-                        <a href="#contact" className="block hover:text-cyan-200">
-                            Contact
-                        </a>
-                    </div>
-                </div>
-            )}
         </nav>
     );
 };

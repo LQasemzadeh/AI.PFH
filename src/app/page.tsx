@@ -5,6 +5,7 @@ import Introduction from "@/app/Components/Introduction";
 import Technology from "@/app/Components/Technology";
 import Assignments from "@/app/Components/Assignments";
 import Tools from "@/app/Components/Tools";
+import Contact from "@/app/Components/Contact";
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
             <Technology />
             <Assignments />
             <Tools />
+            <Contact />
         </div>
     );
 }
