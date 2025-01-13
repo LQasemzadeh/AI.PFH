@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
                             </Link>
                         </div>
 
-                        {/* Links */}
+                        {/* Desktop Links */}
                         <div className="hidden md:flex space-x-6 text-sm">
                             <a href="#news" className="text-white hover:text-cyan-200">
                                 News
@@ -138,6 +138,45 @@ const Navbar: React.FC = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Mobile Dropdown Menu */}
+            {navbarOpen && (
+                <div className="md:hidden bg-white">
+                    <div className="px-4 py-4 text-gray-900 text-sm">
+                        {/* Search Bar at the Top */}
+                        <div className="flex items-center mb-4" ref={searchRef}>
+                            <FiSearch
+                                className="text-gray-900 text-2xl cursor-pointer mr-2"
+                                onClick={() => setSearchOpen(!searchOpen)}
+                            />
+                            <input
+                                type="text"
+                                placeholder="Search..."
+                                className={`bg-gray-200 px-4 py-2 rounded-md outline-none shadow-sm transition-all duration-300 ${
+                                    searchOpen ? 'w-full opacity-100' : 'w-0 opacity-0'
+                                }`}
+                            />
+                        </div>
+
+                        {/* Links */}
+                        <a href="#news" className="block hover:text-cyan-600">
+                            News
+                        </a>
+                        <a href="#publications" className="block hover:text-cyan-600">
+                            Publications
+                        </a>
+                        <a href="#events" className="block hover:text-cyan-600">
+                            Events
+                        </a>
+                        <a href="#about" className="block hover:text-cyan-600">
+                            About
+                        </a>
+                        <a href="#contact" className="block hover:text-cyan-600">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            )}
         </nav>
     );
 };
