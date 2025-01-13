@@ -23,13 +23,10 @@ const Tools = () => {
 
     return (
         <div className="bg-white text-gray-900 py-10 px-12">
-            <h2 className="text-3xl font-bold mb-6">1. Technology</h2>
+            <h2 className="text-3xl font-bold mb-6">3. Tools and practical use of AI</h2>
             <p className="text-sm mb-8 leading-relaxed text-gray-700">
-                Artificial Intelligence, or AI for short, is a fascinating and often misunderstood field of computer
-                science.
-                Although the term AI is often used, many people do not know exactly what it means. In the following
-                videos,
-                we wish to clarify any lingering doubts and explain what AI is, how it works and why it is so important.
+
+                In addition to the theoretical foundations, the practical implementation of certain tools is also very important. With the following videos, you will be given an overview of the utilisation of typical tools which will enable you to get started with AI as quickly and as easily as possible.
             </p>
             <div className="flex overflow-x-scroll space-x-6 scrollbar-hide">
                 {videos.map((video, index) => (

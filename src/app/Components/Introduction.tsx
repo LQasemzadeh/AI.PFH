@@ -16,20 +16,11 @@ const Introduction: React.FC = () => {
 
                 {/* Right Side: Content */}
                 <div className="w-full md:w-1/2 space-y-4">
-                    <h2 className="text-2xl md:text-4xl font-bold text-gray-800">
-                        History of PFH
+                    <h2 className="text-lg md:text-2xl font-bold text-gray-800">
+                        Prof. Dr. Frank Albe,
+                        <br/>
+                        President of PFH on the question of AI
                     </h2>
-                    <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                        PFH was founded with a commitment to innovation and excellence. Our
-                        institution combines cutting-edge research with practical
-                        applications, fostering an environment where education meets
-                        real-world challenges.
-                    </p>
-                    <p className="text-gray-600 text-sm md:text-base leading-relaxed">
-                        Today, PFH has grown into a globally recognized university,
-                        empowering students to lead in industries ranging from technology
-                        and management to artificial intelligence and more.
-                    </p>
                 </div>
             </div>
         </section>

@@ -69,16 +69,16 @@ const Navbar: React.FC = () => {
 
                         {/* Links */}
                         <div className="hidden md:flex space-x-6 text-sm">
-                            <a href="#news" className="text-white hover:text-gray-300">
+                            <a href="#news" className="text-white hover:text-cyan-200">
                                 News
                             </a>
-                            <a href="#publications" className="text-white hover:text-gray-300">
+                            <a href="#publications" className="text-white hover:text-cyan-200">
                                 Publications
                             </a>
-                            <a href="#about" className="text-white hover:text-gray-300">
+                            <a href="#about" className="text-white hover:text-cyan-200">
                                 About
                             </a>
-                            <a href="#contact" className="text-white hover:text-gray-300">
+                            <a href="#contact" className="text-white hover:text-cyan-200">
                                 Contact
                             </a>
                         </div>
@@ -109,7 +109,7 @@ const Navbar: React.FC = () => {
 
                         {/* Language Toggle */}
                         <div
-                            className="flex items-center text-white text-sm cursor-pointer hover:text-gray-300"
+                            className="flex items-center text-white text-sm cursor-pointer hover:text-cyan-200"
                             onClick={() => setLanguage((prev) => (prev === 'EN' ? 'DE' : 'EN'))}
                         >
                             <MdLanguage className="text-xl mr-1" />
@@ -121,7 +121,7 @@ const Navbar: React.FC = () => {
                     <div className="flex md:hidden items-center space-x-4">
                         {/* Language Toggle */}
                         <div
-                            className="flex items-center text-white text-sm cursor-pointer hover:text-gray-300"
+                            className="flex items-center text-white text-sm cursor-pointer hover:text-cyan-200"
                             onClick={() => setLanguage((prev) => (prev === 'EN' ? 'DE' : 'EN'))}
                         >
                             <MdLanguage className="text-xl mr-1" />
@@ -155,16 +155,16 @@ const Navbar: React.FC = () => {
                                 />
                             )}
                         </div>
-                        <a href="#news" className="block hover:text-gray-300">
+                        <a href="#news" className="block hover:text-cyan-200">
                             News
                         </a>
-                        <a href="#publications" className="block hover:text-gray-300">
+                        <a href="#publications" className="block hover:text-cyan-200">
                             Publications
                         </a>
-                        <a href="#about" className="block hover:text-gray-300">
+                        <a href="#about" className="block hover:text-cyan-200">
                             About
                         </a>
-                        <a href="#contact" className="block hover:text-gray-300">
+                        <a href="#contact" className="block hover:text-cyan-200">
                             Contact
                         </a>
                     </div>

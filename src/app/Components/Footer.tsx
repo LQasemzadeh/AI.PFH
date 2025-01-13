@@ -13,17 +13,17 @@ const Footer: React.FC = () => {
                     <div className="md:col-span-1">
                         <ul className="space-y-2">
                             <li>
-                                <a href="#news" className="hover:text-white">
+                                <a href="#news" className="hover:text-cyan-200">
                                     News
                                 </a>
                             </li>
                             <li>
-                                <a href="#publications" className="hover:text-white">
+                                <a href="#publications" className="hover:text-cyan-200">
                                     Publications
                                 </a>
                             </li>
                             <li>
-                                <a href="#events" className="hover:text-white">
+                                <a href="#events" className="hover:text-cyan-200">
                                     Events
                                 </a>
                             </li>
@@ -34,12 +34,12 @@ const Footer: React.FC = () => {
                     <div className="md:col-span-1">
                         <ul className="space-y-2">
                             <li>
-                                <a href="#about" className="hover:text-white">
+                                <a href="#about" className="hover:text-cyan-200">
                                     About
                                 </a>
                             </li>
                             <li>
-                                <a href="#contact" className="hover:text-white">
+                                <a href="#contact" className="hover:text-cyan-200">
                                     Contact
                                 </a>
                             </li>
@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
                             />
                             <button
                                 type="submit"
-                                className="px-4 py-2 bg-blue-600 hover:bg-purple-700 text-white rounded-r-md"
+                                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-r-md"
                             >
                                 Subscribe
                             </button>
@@ -85,7 +85,7 @@ const Footer: React.FC = () => {
                                 href="https://www.facebook.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-300 hover:text-white"
+                                className="text-gray-300 hover:text-cyan-200"
                             >
                                 <FaFacebookF size={20} />
                             </a>
@@ -93,7 +93,7 @@ const Footer: React.FC = () => {
                                 href="https://www.instagram.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-300 hover:text-white"
+                                className="text-gray-300 hover:text-cyan-200"
                             >
                                 <FaInstagram size={20} />
                             </a>
@@ -101,7 +101,7 @@ const Footer: React.FC = () => {
                                 href="https://www.twitter.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-300 hover:text-white"
+                                className="text-gray-300 hover:text-cyan-200"
                             >
                                 <FaTwitter size={20} />
                             </a>
@@ -109,7 +109,7 @@ const Footer: React.FC = () => {
                                 href="https://www.youtube.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-gray-300 hover:text-white"
+                                className="text-gray-300 hover:text-cyan-200"
                             >
                                 <FaYoutube size={20} />
                             </a>
