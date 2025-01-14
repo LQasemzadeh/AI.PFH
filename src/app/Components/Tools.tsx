@@ -41,8 +41,6 @@ const Tools = () => {
                             poster={video.poster || ""}
                             controls
                         />
-                        {/* Dark overlay */}
-                        <div className="absolute w-full h-full bg-black opacity-30 rounded-lg"></div>
 
                         {/* Title */}
                         <div
