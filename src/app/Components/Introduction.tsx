@@ -16,7 +16,7 @@ const Introduction: React.FC = () => {
 
                 {/* Right Side: Content */}
                 <div className="w-full md:w-1/2 space-y-4">
-                    <h2 className="text-lg md:text-2xl font-bold text-gray-800">
+                    <h2 className="text-lg md:text-2xl font-bold text-blue-900">
                         Prof. Dr. Frank Albe,
                         <br/>
                         President of PFH on the question of AI

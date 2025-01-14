@@ -6,6 +6,7 @@ import Technology from "@/app/Components/Technology";
 import Assignments from "@/app/Components/Assignments";
 import Tools from "@/app/Components/Tools";
 import Contact from "@/app/Components/Contact";
+import Docs from "@/app/Components/Docs";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
             <Technology />
             <Assignments />
             <Tools />
+            <Docs />
             <Contact />
         </div>
     );

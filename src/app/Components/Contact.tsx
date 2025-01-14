@@ -8,9 +8,9 @@ const Contact: React.FC = () => {
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Left Section */}
                 <div className="space-y-6">
-                    <h2 className="text-2xl font-bold text-blue-900">Let's Talk about AI@PFH!</h2>
+                    <h2 className="text-3xl font-bold text-blue-900">Let&apos;s Talk about AI@PFH!</h2>
                     <p className="text-gray-600 text-sm">
-                        The content and support listed here is coordinated at PFH by the "AI@PFH" working group.
+                        The content and support listed here is coordinated at PFH by the &quot;AI@PFH&quot; working group.
                         This interdisciplinary working group is headed by Prof. Dr.-Ing. Stefan Wagenpfeil.
                     </p>
                     <p className="text-gray-600 text-sm">
@@ -32,7 +32,7 @@ const Contact: React.FC = () => {
                                     type="text"
                                     id="first-name"
                                     name="first-name"
-                                    className="mt-1 block w-full h-8 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                                    className="mt-1 block w-full h-10 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                                 />
                             </div>
                             <div>
@@ -43,7 +43,7 @@ const Contact: React.FC = () => {
                                     type="text"
                                     id="last-name"
                                     name="last-name"
-                                    className="mt-1 block w-full h-8 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                                    className="mt-1 block w-full h-10 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                                 />
                             </div>
                         </div>
@@ -55,7 +55,7 @@ const Contact: React.FC = () => {
                                 type="email"
                                 id="email"
                                 name="email"
-                                className="mt-1 block w-full h-8 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                                className="mt-1 block w-full h-10 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                             />
                         </div>
                         <div>
@@ -66,7 +66,7 @@ const Contact: React.FC = () => {
                                 id="message"
                                 name="message"
                                 rows={4}
-                                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
+                                className="mt-1 block w-full h-28 rounded-md border-gray-300 shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
                             ></textarea>
                         </div>
                         <div>
