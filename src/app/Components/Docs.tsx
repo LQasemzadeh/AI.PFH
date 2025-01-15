@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { PiSmileyWinkDuotone } from "react-icons/pi";
 
 const Docs = () => {
