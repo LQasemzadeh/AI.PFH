@@ -3,8 +3,14 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X } from 'lucide-react'; // Chat & Close Icons
 
+// Define a type for messages
+type ChatMessage = {
+    role: 'user' | 'bot';
+    text: string;
+};
+
 const ChatBot: React.FC = () => {
-    const [messages, setMessages] = useState<{ role: 'user' | 'bot'; text: string }[]>([]);
+    const [messages, setMessages] = useState<ChatMessage[]>([]);
     const [input, setInput] = useState('');
     const [isOpen, setIsOpen] = useState(false);
     const chatBoxRef = useRef<HTMLDivElement>(null);
@@ -26,7 +32,7 @@ const ChatBot: React.FC = () => {
         if (!input.trim()) return;
 
         // Add user's message
-        const newMessages = [...messages, { role: 'user', text: input }];
+        const newMessages: ChatMessage[] = [...messages, { role: 'user', text: input }];
         setMessages(newMessages);
 
         try {
