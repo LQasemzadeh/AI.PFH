@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageSquare, X } from 'lucide-react'; // Chat & Close Icons
 
-// Define a type for messages
+// Define TypeScript types
 type ChatMessage = {
     role: 'user' | 'bot';
     text: string;
@@ -13,6 +13,7 @@ const ChatBot: React.FC = () => {
     const [messages, setMessages] = useState<ChatMessage[]>([]);
     const [input, setInput] = useState('');
     const [isOpen, setIsOpen] = useState(false);
+    const [loading, setLoading] = useState(false);
     const chatBoxRef = useRef<HTMLDivElement>(null);
 
     // Close chat if clicked outside
@@ -30,10 +31,11 @@ const ChatBot: React.FC = () => {
 
     const handleSendMessage = async () => {
         if (!input.trim()) return;
+        setLoading(true);
 
-        // Add user's message
         const newMessages: ChatMessage[] = [...messages, { role: 'user', text: input }];
         setMessages(newMessages);
+        setInput('');
 
         try {
             const response = await fetch('/api/chatbot', {
@@ -42,13 +44,22 @@ const ChatBot: React.FC = () => {
                 body: JSON.stringify({ message: input }),
             });
 
+            if (!response.ok) {
+                throw new Error(`Error: ${response.status} ${response.statusText}`);
+            }
+
             const data = await response.json();
+
+            if (data.error) {
+                throw new Error(data.error);
+            }
+
             setMessages([...newMessages, { role: 'bot', text: data.reply }]);
         } catch (error) {
-            setMessages([...newMessages, { role: 'bot', text: 'Error: Unable to get response.' }]);
+            setMessages([...newMessages, { role: 'bot', text: `Error: ${(error as Error).message}` }]);
+        } finally {
+            setLoading(false);
         }
-
-        setInput('');
     };
 
     return (
@@ -88,6 +99,7 @@ const ChatBot: React.FC = () => {
                                 {msg.text}
                             </div>
                         ))}
+                        {loading && <div className="text-gray-500">Thinking...</div>}
                     </div>
 
                     {/* Input Field */}
@@ -99,8 +111,9 @@ const ChatBot: React.FC = () => {
                             onChange={(e) => setInput(e.target.value)}
                             onKeyDown={(e) => e.key === 'Enter' && handleSendMessage()}
                             placeholder="Ask something..."
+                            disabled={loading}
                         />
-                        <button className="p-2 bg-blue-500 text-white rounded-r-lg" onClick={handleSendMessage}>
+                        <button className="p-2 bg-blue-500 text-white rounded-r-lg" onClick={handleSendMessage} disabled={loading}>
                             Send
                         </button>
                     </div>
