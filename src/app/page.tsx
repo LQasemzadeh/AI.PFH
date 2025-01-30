@@ -7,7 +7,6 @@ import Assignments from "@/app/Components/Assignments";
 import Tools from "@/app/Components/Tools";
 import Contact from "@/app/Components/Contact";
 import Docs from "@/app/Components/Docs";
-import ChatBot from "@/app/Components/ChatBot";
 
 
 export default function Home() {
@@ -21,7 +20,7 @@ export default function Home() {
             <Tools />
             <Docs />
             <Contact />
-            <ChatBot />
+
         </div>
     );
 }
